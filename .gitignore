@@ -8,3 +8,6 @@ projects/smoketest/
 venv
 models
 repos
+
+# Remotion skills are fetched from remotion-dev/skills by setup (no redistribution)
+.claude/skills/remotion-*/

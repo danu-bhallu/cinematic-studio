@@ -69,6 +69,9 @@ if [ ! -d projects/remotion-launch/node_modules ]; then
 fi
 command -v hyperframes >/dev/null || npm install -g hyperframes >/dev/null 2>&1 || echo "warn: hyperframes not installed"
 hyperframes telemetry disable >/dev/null 2>&1 || true
+[ -d repos/remotion-dev_skills ] || git clone -q --depth 1 https://github.com/remotion-dev/skills repos/remotion-dev_skills || true
+# Official Remotion skills (fetched, not redistributed)
+for s in repos/remotion-dev_skills/skills/*/; do [ -d "$s" ] && [ ! -e ".claude/skills/$(basename $s)" ] && mkdir -p .claude/skills && cp -r "$s" ".claude/skills/$(basename $s)"; done
 [ -d repos/heygen-com_hyperframes ] || git clone -q --depth 1 https://github.com/heygen-com/hyperframes repos/heygen-com_hyperframes || true
 
 echo "$ST" > "$SK/../STUDIO_ROOT" 2>/dev/null || true

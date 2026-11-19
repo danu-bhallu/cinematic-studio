@@ -13,5 +13,5 @@ for s in "$ROOT"/.claude/skills/*/; do
 done
 echo "$ROOT" > "$DEST/createvid/STUDIO_ROOT"
 echo "Installed $(ls "$ROOT"/.claude/skills | wc -l) skills into $DEST. Studio root: $ROOT"
-[ "$1" = "--setup" ] && bash "$ROOT/setup.sh"
+[ "$1" = "--setup" ] && bash "$ROOT/setup.sh" && for s in "$ROOT"/.claude/skills/remotion-*/; do [ -d "$s" ] && cp -rn "$s" "$DEST/" ; done
 echo "Start any Claude Code chat with:  /createvid <your idea>"

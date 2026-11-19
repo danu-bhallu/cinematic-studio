@@ -1,10 +1,10 @@
 # Third-party material
 
-The vendored skills in `.claude/skills/` come from the repos below. Each keeps its upstream licence, and a LICENSE file sits in the skill folder where the upstream repo has one. **Keep this repo private.** Some material is AGPL-3.0, and the Remotion skills carry no explicit open-source licence.
+The vendored skills in `.claude/skills/` come from the repos below. Each keeps its upstream licence, and a LICENSE file sits in the skill folder where the upstream repo has one. The `om-*` skills are AGPL-3.0, so keep their LICENSE files and source. The Remotion skills are **not** included: setup downloads them from remotion-dev/skills. Remotion itself needs a paid company licence for companies of 4+ people.
 
 | Prefix / skill | Source | License |
 |---|---|---|
-| `remotion-*` | github.com/remotion-dev/skills | none stated (Remotion itself: Remotion License, free for individuals and companies of up to 3 people) |
+| `remotion-*` (downloaded at setup, not in this repo) | github.com/remotion-dev/skills | none stated; Remotion License applies |
 | `hf-*` | github.com/heygen-com/hyperframes | Apache-2.0 |
 | `ds-*` | github.com/digitalsamba/claude-code-video-toolkit | MIT |
 | `om-*` | github.com/calesthio/OpenMontage | AGPL-3.0 |

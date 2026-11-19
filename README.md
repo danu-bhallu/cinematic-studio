@@ -17,6 +17,8 @@ It plans every shot, then builds the video:
 
 ## Use it
 
+**Easiest:** download [Claude desktop](https://claude.com/download), open the **Code** tab, drag in [`SETUP_FOR_CLAUDE.txt`](SETUP_FOR_CLAUDE.txt) and say "do this". Claude installs everything. Then type `/createvid <your idea>` in any new chat.
+
 **In a Claude Code cloud session (claude.ai/code):** start a session with this repo selected and type `/createvid ...`. The first run builds the tools (about 10 min).
 
 **In Claude Code on your computer:**

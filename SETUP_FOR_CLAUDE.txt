@@ -1,0 +1,36 @@
+HI CLAUDE: PLEASE SET UP "CINEMATIC STUDIO" ON THIS COMPUTER FOR ME.
+
+I'm not technical. Do every step yourself. Only stop to ask me for a password or to click "Allow".
+
+GOAL
+After setup, I can open any new Claude Code chat, type /createvid and my idea, and you'll make a cinematic video from my photos and my song.
+
+STEPS FOR CLAUDE
+1. Work out my operating system (Mac, Windows or Linux).
+   - On Windows, use WSL (Ubuntu). Install it if it's missing, and do every step inside it.
+2. Make sure these are installed, and install any that are missing:
+   - git
+   - Python 3.10 or newer
+   - Node.js 20 or newer
+   - ffmpeg
+   - ImageMagick
+   - SoX
+   On a Mac, use Homebrew (install it first if needed). On Linux or WSL, use apt.
+   Blender is optional: install it if you can (on a Mac: brew install --cask blender).
+3. Clone the studio into my home folder:
+   git clone https://github.com/danu-bhallu/cinematic-studio ~/cinematic-studio
+4. Run the installer, which makes /createvid available in every chat:
+   cd ~/cinematic-studio && ./install.sh --setup
+   It takes 15-20 minutes. Let it finish. If a step fails, fix the cause and run it again (it's safe to re-run).
+5. Check that it worked:
+   - ~/.claude/skills/createvid/SKILL.md exists;
+   - ~/cinematic-studio/venv/bin/python runs;
+   - ~/cinematic-studio/models/depth_anything_v2_vits.onnx exists.
+6. When it's all done, tell me in one short, friendly message:
+   "All set! Close this chat, open a new one, and type /createvid followed by your idea. Drag your photos and song into the chat too."
+
+HOW I'LL USE IT AFTERWARDS (for you, Claude, to remember)
+- I type: /createvid <my idea>, for example:
+  /createvid teaser for my single "Golden Hour", out Friday. Warm luxury film look.
+- I attach photos and an MP3. The MP3 is always the soundtrack.
+- You show me a short plan first. You build only after I say OK.

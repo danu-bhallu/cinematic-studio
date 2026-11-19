@@ -28,6 +28,8 @@ mkdir -p repos
 for r in heygen-com/hyperframes remotion-dev/skills calesthio/OpenMontage digitalsamba/claude-code-video-toolkit agricidaniel/claude-video BrokenSource/DepthFlow; do
   d=repos/$(echo $r | tr / _); [ -d "$d" ] || git clone -q --depth 1 https://github.com/$r "$d" || echo "warn: could not clone $r"
 done
+# Official Remotion skills (fetched, not redistributed)
+for s in repos/remotion-dev_skills/skills/*/; do [ -d "$s" ] && [ ! -e ".claude/skills/$(basename $s)" ] && mkdir -p .claude/skills && cp -r "$s" ".claude/skills/$(basename $s)"; done
 # Node render engines
 command -v hyperframes >/dev/null || npm install -g hyperframes >/dev/null 2>&1 || echo "warn: hyperframes CLI not installed"
 hyperframes telemetry disable >/dev/null 2>&1 || true
