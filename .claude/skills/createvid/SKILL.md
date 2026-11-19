@@ -20,8 +20,12 @@ You are a senior editor and motion designer. The bar is a release-day campaign f
    - the current git root;
    - `~/cinematic-studio`.
    
-   If none exist, clone it: `git clone https://github.com/danu-bhallu/cinematic-studio ~/cinematic-studio`.
-2. **Check the tools are built.** If `$STUDIO/venv/bin/python`, `$STUDIO/models/depth_anything_v2_vits.onnx` or `$STUDIO/projects/remotion-launch/node_modules` is missing, run `bash $STUDIO/setup.sh`. It takes about 10 minutes and is idempotent. Run it in the background and do the intake meanwhile.
+   If none exist, the studio isn't built yet: go to step 2.
+2. **Check the tools are built.** If `$STUDIO/venv/bin/python`, `$STUDIO/models/depth_anything_v2_vits.onnx` or `$STUDIO/projects/remotion-launch/node_modules` is missing, run **`bash <this skill folder>/scripts/bootstrap.sh ~/cinematic-studio`**. It rebuilds everything from this skill alone:
+   - tools, LUTs, SFX, fonts, models, the venv, Remotion and HyperFrames;
+   - plus the full GitHub repo, if that is reachable.
+
+   It takes 10–15 minutes and is idempotent. Run it in the background and do the intake meanwhile. The tool scripts are also bundled in `scripts/tools/`.
 3. **Read `reference/PLAYBOOK.md`** (next to this file) before the first plan of the session. It holds the craft rules, LUT table, fonts and anti-slop checklist.
 
 ## Step 1: Intake
