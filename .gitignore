@@ -1,0 +1,10 @@
+venv/
+models/
+repos/
+**/node_modules/
+projects/*/out/
+projects/smoketest/
+*.mov
+venv
+models
+repos
