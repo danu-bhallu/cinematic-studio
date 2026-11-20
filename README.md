@@ -39,7 +39,7 @@ After that, `/createvid` works in every project on that machine.
 |---|---|
 | `.claude/skills/createvid/` | the master skill and `reference/PLAYBOOK.md` (craft rules, presets, shot-plan template) |
 | `.claude/skills/*` | 45 specialist skills: Remotion (official), HyperFrames motion doctrine and registry, video design, ffmpeg, Blender, captions, audio, enhance |
-| `tools/` | `beats.py` (BPM, downbeats, drops), `parallax.py` (photo → 3D camera move), `cutout.py` (subject isolation), `assemble.py` (beat-grid edit), `grade.py` (LUT, halation, bloom, grain, vignette), `gen_luts.py` |
+| `tools/` | `beats.py` (BPM, downbeats, drops), `music_finder.py` (finds and ranks great tracks), `voiceover.py` (Kokoro / ElevenLabs narration + ducking), `parallax.py` (photo → 3D camera move), `cutout.py` (subject isolation), `assemble.py` (beat-grid edit), `grade.py` (LUT, halation, bloom, grain, vignette), `gen_luts.py` |
 | `luts/` | 11 original film-look LUTs |
 | `fonts/` | 25 display and editorial families (OFL) |
 | `sfx/` | risers, impacts, whooshes, swells, sub drop |

@@ -32,6 +32,9 @@ venv/bin/python -c "import librosa, rembg, onnxruntime, depthflow, moviepy, cv2"
 for m in depth_anything_v2_vits depth_anything_v2_vitb; do
   [ -s models/$m.onnx ] || curl -sfL -o models/$m.onnx https://github.com/fabio-sim/Depth-Anything-ONNX/releases/download/v2.0.0/$m.onnx || echo "warn: $m download failed"
 done
+# Voiceover: Kokoro-82M (local, Apache-2.0)
+venv/bin/python -c "import kokoro_onnx" 2>/dev/null || venv/bin/pip install -q kokoro-onnx || echo "warn: kokoro-onnx not installed"
+for f in kokoro-v1.0.onnx voices-v1.0.bin; do [ -s models/$f ] || curl -sfL -o models/$f https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/$f || echo "warn: $f download failed"; done
 venv/bin/python -I -c "from rembg import new_session; new_session('u2net_human_seg'); new_session('isnet-general-use')" >/dev/null || true
 
 # 5) Looks: LUTs (generated) + SFX (synthesised)

@@ -29,8 +29,15 @@ STEPS FOR CLAUDE
 6. When it's all done, tell me in one short, friendly message:
    "All set! Close this chat, open a new one, and type /createvid followed by your idea. Drag your photos and song into the chat too."
 
+OPTIONAL EXTRAS (ask me once; skip if I say no)
+- A free Jamendo key gives better music search. Help me sign up at developer.jamendo.com, then save JAMENDO_CLIENT_ID in my shell profile.
+- An ElevenLabs API key gives the best voiceovers and lets you generate custom music. If I have one, save ELEVENLABS_API_KEY in my shell profile.
+- Without these, you still have free local voiceover (Kokoro) and free music search (Openverse).
+
 HOW I'LL USE IT AFTERWARDS (for you, Claude, to remember)
 - I type: /createvid <my idea>, for example:
   /createvid teaser for my single "Golden Hour", out Friday. Warm luxury film look.
-- I attach photos and an MP3. The MP3 is always the soundtrack.
+- I attach photos and maybe an MP3. If I upload a song, use it exactly; don't ask where it came from.
+- If I don't upload a song, find a great one and play me the top 3 previews.
+- On the first real run, check that the music finder and voiceover work on this computer.
 - You show me a short plan first. You build only after I say OK.
